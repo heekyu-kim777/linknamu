@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* 따뜻한 톤 배경: 크림색 → 연한 살구색 + 은은한 빛 번짐 */
+  body {
+    background-color: #fff8f0;
+    background-image:
+      radial-gradient(60rem 40rem at 10% -10%, rgba(255, 255, 255, 0.9), transparent 60%),
+      radial-gradient(50rem 40rem at 110% 110%, rgba(251, 191, 160, 0.45), transparent 60%),
+      linear-gradient(170deg, #fffaf3 0%, #fff1e4 45%, #fde3d0 100%);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-color: #1a1513;
+    background-image:
+      radial-gradient(60rem 40rem at 10% -10%, rgba(255, 214, 180, 0.07), transparent 60%),
+      radial-gradient(50rem 40rem at 110% 110%, rgba(234, 140, 100, 0.12), transparent 60%),
+      linear-gradient(170deg, #1c1714 0%, #201915 50%, #2a1e18 100%);
+  }
+}
